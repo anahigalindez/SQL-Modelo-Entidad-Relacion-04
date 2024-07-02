@@ -3,28 +3,33 @@
 Identificar las entidades principales: **Cliente**, **Reserva**, **Coche**, **Garaje** y **Agencia**.
    
   - **Cliente:**
-     - ClienteID
+     - ClienteID **(PK)**
      - Nombre
      - Apellido
      - Direccion
      - Telefono
     
   - **Reserva:**
-     - ReservaID
+     - ReservaID **(PK)**
      - Fecha_Comienzo
      - Fecha_Terminacion
+     - ClienteID **(FK)**
+     - AgenciaID **(FK)**
    
   - **Coche:** 
-     - CocheID
+     - CocheID **(PK)**
      - Marca
      - Patente
+     - ReservaID **(FK)**
+     - NumeroGaraje **(FK)**
+     - AgenciaID **(FK)**
    
   - **Garaje:**
-    - GarajeID
+    - GarajeID **(PK)**
     - NumeroGaraje
 
   - **Agencia**
-    - AgenciaID
+    - AgenciaID **(PK)**
     - Nombre
     - Direccion
     - Telefono
